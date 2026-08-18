@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "updated": "2025-01-01",
   "ingredientPrices": [
     {"keywords": ["chicken breast", "chicken"], "pricePerUnit": 3.50, "unit": "lb"},
@@ -151,13 +151,17 @@
     {"keywords": ["snack", "appetizer", "starter"], "minPrice": 6, "maxPrice": 12, "category": "appetizer"}
   ],
   "unitMultipliers": {
-    "lb": {"oz": 0.0625, "g": 0.00227, "piece": 0.5, "cup": 0.5},
-    "cup": {"tbsp": 0.0625, "tsp": 0.0208, "ml": 0.00423, "piece": 1},
-    "tbsp": {"tsp": 0.333, "ml": 0.0676},
-    "tsp": {"ml": 0.176},
-    "piece": {"oz": 0.25, "g": 0.5},
-    "oz": {"g": 0.0353, "lb": 0.0625},
-    "g": {"lb": 0.00227, "oz": 0.0353},
-    "ml": {"cup": 0.00423, "tbsp": 0.0676, "tsp": 0.208}
+    "lb": {"oz": 0.0625, "g": 453.6, "piece": 0.5, "cup": 0.5},
+    "cup": {"tbsp": 16, "tsp": 48, "ml": 236.6, "piece": 1, "g": 120},
+    "tbsp": {"tsp": 3, "ml": 14.8, "g": 15},
+    "tsp": {"ml": 4.93, "g": 5},
+    "piece": {"oz": 0.25, "g": 50},
+    "oz": {"g": 28.35, "lb": 0.0625},
+    "g": {"lb": 0.00227, "oz": 0.0353, "cup": 0.0083, "tbsp": 0.067, "tsp": 0.2},
+    "ml": {"cup": 0.00423, "tbsp": 0.0676, "tsp": 0.208, "g": 1},
+    "slice": {"piece": 1, "g": 20},
+    "clove": {"piece": 1, "g": 3},
+    "ear": {"piece": 1},
+    "stalk": {"piece": 1}
   }
 }
