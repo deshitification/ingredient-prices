@@ -1,205 +1,2307 @@
 {
-  "version": "1.0.2",
-  "updated": "2025-01-01",
+  "version": "1.2.0",
+  "updated": "2026-08-18",
+  "notes": "unitMultipliers[from][to] = how many `to` units equal 1 `from` unit. App converts primarily via density/grams; this table is fallback only. Prefer specific keywords (chicken breast) over generic (chicken).",
   "ingredientPrices": [
-    {"keywords": ["chicken breast", "chicken"], "pricePerUnit": 3.50, "unit": "lb"},
-    {"keywords": ["chicken thigh"], "pricePerUnit": 2.50, "unit": "lb"},
-    {"keywords": ["ground beef"], "pricePerUnit": 5.50, "unit": "lb"},
-    {"keywords": ["beef", "steak", "sirloin", "ribeye"], "pricePerUnit": 9.00, "unit": "lb"},
-    {"keywords": ["pork", "pork chop", "pork loin"], "pricePerUnit": 4.50, "unit": "lb"},
-    {"keywords": ["bacon"], "pricePerUnit": 0.30, "unit": "slice"},
-    {"keywords": ["salmon"], "pricePerUnit": 12.00, "unit": "lb"},
-    {"keywords": ["fish", "tilapia", "cod", "halibut"], "pricePerUnit": 10.00, "unit": "lb"},
-    {"keywords": ["shrimp"], "pricePerUnit": 11.00, "unit": "lb"},
-    {"keywords": ["sausage", "chorizo"], "pricePerUnit": 4.50, "unit": "lb"},
-    {"keywords": ["ham"], "pricePerUnit": 5.00, "unit": "lb"},
-    {"keywords": ["turkey", "ground turkey"], "pricePerUnit": 4.00, "unit": "lb"},
-    {"keywords": ["tofu"], "pricePerUnit": 2.50, "unit": "lb"},
-    {"keywords": ["egg", "eggs"], "pricePerUnit": 0.25, "unit": "piece"},
-    {"keywords": ["milk"], "pricePerUnit": 0.35, "unit": "cup"},
-    {"keywords": ["butter"], "pricePerUnit": 0.25, "unit": "tbsp"},
-    {"keywords": ["cream", "heavy cream"], "pricePerUnit": 0.40, "unit": "cup"},
-    {"keywords": ["cheddar cheese", "cheddar"], "pricePerUnit": 1.50, "unit": "cup"},
-    {"keywords": ["mozzarella", "parmesan", "cheese"], "pricePerUnit": 1.50, "unit": "cup"},
-    {"keywords": ["yogurt"], "pricePerUnit": 0.50, "unit": "cup"},
-    {"keywords": ["sour cream"], "pricePerUnit": 0.30, "unit": "tbsp"},
-    {"keywords": ["cream cheese"], "pricePerUnit": 0.40, "unit": "oz"},
-    {"keywords": ["cottage cheese"], "pricePerUnit": 0.30, "unit": "cup"},
-    {"keywords": ["rice"], "pricePerUnit": 0.15, "unit": "cup"},
-    {"keywords": ["pasta", "spaghetti", "penne", "macaroni", "noodle"], "pricePerUnit": 0.10, "unit": "cup"},
-    {"keywords": ["bread", "tortilla", "roll"], "pricePerUnit": 0.15, "unit": "piece"},
-    {"keywords": ["flour"], "pricePerUnit": 0.15, "unit": "cup"},
-    {"keywords": ["oats", "oatmeal"], "pricePerUnit": 0.10, "unit": "cup"},
-    {"keywords": ["quinoa"], "pricePerUnit": 0.40, "unit": "cup"},
-    {"keywords": ["cornmeal", "polenta"], "pricePerUnit": 0.20, "unit": "cup"},
-    {"keywords": ["breadcrumbs", "panko"], "pricePerUnit": 0.15, "unit": "cup"},
-    {"keywords": ["onion"], "pricePerUnit": 0.25, "unit": "piece"},
-    {"keywords": ["garlic"], "pricePerUnit": 0.05, "unit": "clove"},
-    {"keywords": ["tomato", "tomatoes"], "pricePerUnit": 0.75, "unit": "piece"},
-    {"keywords": ["potato", "potatoes"], "pricePerUnit": 0.20, "unit": "piece"},
-    {"keywords": ["carrot"], "pricePerUnit": 0.10, "unit": "piece"},
-    {"keywords": ["lettuce", "spinach", "kale", "cabbage"], "pricePerUnit": 0.30, "unit": "cup"},
-    {"keywords": ["bell pepper", "bell peppers"], "pricePerUnit": 0.75, "unit": "piece"},
-    {"keywords": ["mushroom", "mushrooms"], "pricePerUnit": 0.50, "unit": "cup"},
-    {"keywords": ["celery"], "pricePerUnit": 0.15, "unit": "piece"},
-    {"keywords": ["broccoli"], "pricePerUnit": 0.40, "unit": "cup"},
-    {"keywords": ["zucchini", "squash"], "pricePerUnit": 0.50, "unit": "piece"},
-    {"keywords": ["corn"], "pricePerUnit": 0.20, "unit": "cup"},
-    {"keywords": ["peas"], "pricePerUnit": 0.25, "unit": "cup"},
-    {"keywords": ["apple", "apples"], "pricePerUnit": 0.50, "unit": "piece"},
-    {"keywords": ["banana"], "pricePerUnit": 0.15, "unit": "piece"},
-    {"keywords": ["lemon", "lime", "citrus"], "pricePerUnit": 0.40, "unit": "piece"},
-    {"keywords": ["avocado"], "pricePerUnit": 1.00, "unit": "piece"},
-    {"keywords": ["strawberry", "blueberry", "berry", "fruit"], "pricePerUnit": 1.50, "unit": "cup"},
-    {"keywords": ["bean", "beans", "black bean", "kidney bean"], "pricePerUnit": 0.40, "unit": "cup"},
-    {"keywords": ["lentil", "lentils"], "pricePerUnit": 0.30, "unit": "cup"},
-    {"keywords": ["soup", "broth", "stock"], "pricePerUnit": 0.30, "unit": "cup"},
-    {"keywords": ["sauce", "tomato sauce", "marinara", "pesto"], "pricePerUnit": 0.25, "unit": "tbsp"},
-    {"keywords": ["diced tomato", "crushed tomato", "tomato paste"], "pricePerUnit": 0.20, "unit": "tbsp"},
-    {"keywords": ["coconut milk"], "pricePerUnit": 0.30, "unit": "cup"},
-    {"keywords": ["pickle", "relish"], "pricePerUnit": 0.15, "unit": "tbsp"},
-    {"keywords": ["olives"], "pricePerUnit": 0.30, "unit": "tbsp"},
-    {"keywords": ["olive oil", "oil", "vegetable oil", "canola oil"], "pricePerUnit": 0.10, "unit": "tbsp"},
-    {"keywords": ["vinegar", "balsamic"], "pricePerUnit": 0.08, "unit": "tbsp"},
-    {"keywords": ["soy sauce"], "pricePerUnit": 0.05, "unit": "tbsp"},
-    {"keywords": ["ketchup", "mustard", "mayonnaise", "mayo"], "pricePerUnit": 0.08, "unit": "tbsp"},
-    {"keywords": ["honey", "maple syrup", "syrup"], "pricePerUnit": 0.12, "unit": "tbsp"},
-    {"keywords": ["jam", "jelly", "preserves"], "pricePerUnit": 0.10, "unit": "tbsp"},
-    {"keywords": ["hot sauce", "sriracha"], "pricePerUnit": 0.05, "unit": "tbsp"},
-    {"keywords": ["dressing", "salad dressing"], "pricePerUnit": 0.15, "unit": "tbsp"},
-    {"keywords": ["salt", "pepper", "spice", "seasoning"], "pricePerUnit": 0.02, "unit": "tsp"},
-    {"keywords": ["cumin", "paprika", "chili powder", "curry"], "pricePerUnit": 0.03, "unit": "tsp"},
-    {"keywords": ["cinnamon", "nutmeg", "ginger"], "pricePerUnit": 0.04, "unit": "tsp"},
-    {"keywords": ["herb", "basil", "oregano", "thyme", "rosemary", "parsley", "cilantro", "dill"], "pricePerUnit": 0.03, "unit": "tsp"},
-    {"keywords": ["garlic powder", "onion powder"], "pricePerUnit": 0.02, "unit": "tsp"},
-    {"keywords": ["sugar", "brown sugar"], "pricePerUnit": 0.08, "unit": "tbsp"},
-    {"keywords": ["baking soda", "baking powder"], "pricePerUnit": 0.02, "unit": "tsp"},
-    {"keywords": ["vanilla extract", "extract"], "pricePerUnit": 0.10, "unit": "tsp"},
-    {"keywords": ["chocolate", "cocoa"], "pricePerUnit": 0.20, "unit": "tbsp"},
-    {"keywords": ["chips", "chocolate chips"], "pricePerUnit": 0.15, "unit": "tbsp"},
-    {"keywords": ["yeast", "instant yeast", "baking yeast"], "pricePerUnit": 0.15, "unit": "tsp"},
-    {"keywords": ["ladyfinger", "ladyfinger biscuit"], "pricePerUnit": 0.20, "unit": "piece"},
-    {"keywords": ["crouton"], "pricePerUnit": 0.10, "unit": "cup"},
-    {"keywords": ["buttermilk"], "pricePerUnit": 0.40, "unit": "cup"},
-    {"keywords": ["mascarpone"], "pricePerUnit": 0.50, "unit": "oz"},
-    {"keywords": ["cucumber"], "pricePerUnit": 0.50, "unit": "piece"},
-    {"keywords": ["green onion", "scallion"], "pricePerUnit": 0.10, "unit": "stalk"},
-    {"keywords": ["artichoke"], "pricePerUnit": 1.50, "unit": "piece"},
-    {"keywords": ["oyster sauce"], "pricePerUnit": 0.15, "unit": "tbsp"},
-    {"keywords": ["fish sauce"], "pricePerUnit": 0.10, "unit": "tbsp"},
-    {"keywords": ["mirin"], "pricePerUnit": 0.12, "unit": "tbsp"},
-    {"keywords": ["sesame seeds", "sesame seed"], "pricePerUnit": 0.10, "unit": "tbsp"},
-    {"keywords": ["curry paste", "green curry paste"], "pricePerUnit": 0.20, "unit": "tbsp"},
-    {"keywords": ["gochujang", "korean chili paste"], "pricePerUnit": 0.20, "unit": "tbsp"},
-    {"keywords": ["bamboo shoots", "bamboo shoot"], "pricePerUnit": 0.15, "unit": "cup"},
-    {"keywords": ["garam masala"], "pricePerUnit": 0.05, "unit": "tsp"},
-    {"keywords": ["turmeric"], "pricePerUnit": 0.04, "unit": "tsp"},
-    {"keywords": ["wine", "white wine", "red wine"], "pricePerUnit": 1.50, "unit": "cup"},
-    {"keywords": ["anchovy"], "pricePerUnit": 0.20, "unit": "piece"},
-    {"keywords": ["pine nuts", "pine nut"], "pricePerUnit": 0.50, "unit": "tbsp"},
-    {"keywords": ["capers", "caper"], "pricePerUnit": 0.15, "unit": "tbsp"},
-    {"keywords": ["coffee liqueur", "kaahlua", "kahlua"], "pricePerUnit": 1.50, "unit": "tbsp"},
-    {"keywords": ["espresso", "coffee", "strong coffee"], "pricePerUnit": 0.10, "unit": "cup"},
-    {"keywords": ["frozen", "ice cream"], "pricePerUnit": 0.50, "unit": "cup"},
-    {"keywords": ["waffle", "frozen waffle"], "pricePerUnit": 0.30, "unit": "piece"},
-    {"keywords": ["frozen vegetable"], "pricePerUnit": 0.30, "unit": "cup"},
-    {"keywords": ["pancake"], "pricePerUnit": 0.10, "unit": "piece"},
-    {"keywords": ["cereal", "granola"], "pricePerUnit": 0.15, "unit": "cup"},
-    {"keywords": ["muffin", "biscuit", "scone"], "pricePerUnit": 0.20, "unit": "piece"},
-    {"keywords": ["bagel", "croissant"], "pricePerUnit": 0.30, "unit": "piece"},
-    {"keywords": ["cornstarch", "corn starch"], "pricePerUnit": 0.03, "unit": "tbsp"},
-    {"keywords": ["dijon mustard", "dijon"], "pricePerUnit": 0.12, "unit": "tbsp"},
-    {"keywords": ["red pepper flakes", "chili flakes"], "pricePerUnit": 0.03, "unit": "tsp"},
-    {"keywords": ["lemon zest", "lime zest", "zest"], "pricePerUnit": 0.10, "unit": "tsp"},
-    {"keywords": ["lemon juice", "lime juice", "citrus juice"], "pricePerUnit": 0.08, "unit": "tbsp"},
-    {"keywords": ["tahini"], "pricePerUnit": 0.15, "unit": "tbsp"},
-    {"keywords": ["worcestershire sauce"], "pricePerUnit": 0.06, "unit": "tbsp"},
-    {"keywords": ["sun-dried tomatoes", "sun dried tomatoes"], "pricePerUnit": 0.20, "unit": "tbsp"},
-    {"keywords": ["feta cheese", "feta"], "pricePerUnit": 0.50, "unit": "oz"},
-    {"keywords": ["cotija cheese", "cotija"], "pricePerUnit": 0.60, "unit": "oz"},
-    {"keywords": ["ricotta cheese", "ricotta"], "pricePerUnit": 0.40, "unit": "cup"},
-    {"keywords": ["shallot", "shallots"], "pricePerUnit": 0.30, "unit": "piece"},
-    {"keywords": ["marsala wine", "marsala"], "pricePerUnit": 2.00, "unit": "cup"},
-    {"keywords": ["peanut butter", "peanuts"], "pricePerUnit": 0.10, "unit": "tbsp"},
-    {"keywords": ["neutral oil", "cooking oil"], "pricePerUnit": 0.08, "unit": "tbsp"},
-    {"keywords": ["sourdough"], "pricePerUnit": 0.20, "unit": "slice"},
-    {"keywords": ["butternut squash", "butternut"], "pricePerUnit": 0.50, "unit": "piece"},
-    {"keywords": ["kalamata olives", "kalamata"], "pricePerUnit": 0.40, "unit": "tbsp"},
-    {"keywords": ["italian seasoning"], "pricePerUnit": 0.03, "unit": "tsp"},
-    {"keywords": ["balsamic glaze"], "pricePerUnit": 0.12, "unit": "tbsp"},
-    {"keywords": ["red wine vinegar", "white vinegar", "apple cider vinegar"], "pricePerUnit": 0.06, "unit": "tbsp"},
-    {"keywords": ["baby potatoes", "russet potatoes", "yellow potatoes"], "pricePerUnit": 0.20, "unit": "piece"},
-    {"keywords": ["yellow onion", "yellow onions", "red onion", "white onion"], "pricePerUnit": 0.25, "unit": "piece"},
-    {"keywords": ["san marzano", "canned tomatoes"], "pricePerUnit": 0.20, "unit": "tbsp"},
-    {"keywords": ["canned crushed tomatoes", "crushed tomatoes"], "pricePerUnit": 0.18, "unit": "tbsp"},
-    {"keywords": ["bbq sauce", "barbecue sauce"], "pricePerUnit": 0.08, "unit": "tbsp"},
-    {"keywords": ["smoked paprika"], "pricePerUnit": 0.04, "unit": "tsp"},
-    {"keywords": ["dill seeds", "dill seed"], "pricePerUnit": 0.04, "unit": "tsp"},
-    {"keywords": ["black peppercorns", "peppercorns"], "pricePerUnit": 0.03, "unit": "tsp"},
-    {"keywords": ["cloves", "clove spice"], "pricePerUnit": 0.05, "unit": "tsp"},
-    {"keywords": ["bread flour"], "pricePerUnit": 0.18, "unit": "cup"},
-    {"keywords": ["dark chocolate", "white chocolate"], "pricePerUnit": 0.20, "unit": "tbsp"},
-    {"keywords": ["rolled oats"], "pricePerUnit": 0.10, "unit": "cup"},
-    {"keywords": ["frozen peas", "frozen spinach", "frozen vegetables", "frozen corn"], "pricePerUnit": 0.30, "unit": "cup"},
-    {"keywords": ["cremini mushrooms", "cremini"], "pricePerUnit": 0.60, "unit": "cup"},
-    {"keywords": ["chicken broth", "vegetable broth", "beef broth", "broth"], "pricePerUnit": 0.30, "unit": "cup"},
-    {"keywords": ["tomato sauce"], "pricePerUnit": 0.15, "unit": "tbsp"},
-    {"keywords": ["water"], "pricePerUnit": 0, "unit": "g"}
+    {
+      "keywords": [
+        "chicken breast",
+        "boneless skinless chicken breast"
+      ],
+      "pricePerUnit": 4.15,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "chicken thigh",
+        "chicken thighs",
+        "bone-in chicken thigh",
+        "boneless chicken thigh"
+      ],
+      "pricePerUnit": 2.8,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "whole chicken",
+        "rotisserie chicken"
+      ],
+      "pricePerUnit": 1.9,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "ground chicken"
+      ],
+      "pricePerUnit": 4.5,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "chicken wing",
+        "chicken wings"
+      ],
+      "pricePerUnit": 3.5,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "chicken drumstick",
+        "chicken drumsticks",
+        "chicken legs"
+      ],
+      "pricePerUnit": 1.8,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "chicken broth",
+        "chicken stock"
+      ],
+      "pricePerUnit": 0.25,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "chicken"
+      ],
+      "pricePerUnit": 3.25,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "lean ground beef",
+        "90/10 ground beef",
+        "ground beef 90"
+      ],
+      "pricePerUnit": 7.5,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "ground beef",
+        "hamburger meat",
+        "80/20 ground beef"
+      ],
+      "pricePerUnit": 6.85,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "stew meat",
+        "beef stew meat"
+      ],
+      "pricePerUnit": 7.0,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "chuck roast",
+        "pot roast",
+        "beef roast"
+      ],
+      "pricePerUnit": 7.5,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "brisket"
+      ],
+      "pricePerUnit": 8.5,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "sirloin",
+        "sirloin steak"
+      ],
+      "pricePerUnit": 9.5,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "new york strip",
+        "strip steak"
+      ],
+      "pricePerUnit": 14.0,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "ribeye",
+        "rib eye"
+      ],
+      "pricePerUnit": 16.0,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "filet mignon",
+        "filet",
+        "tenderloin steak"
+      ],
+      "pricePerUnit": 22.0,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "flank steak",
+        "skirt steak"
+      ],
+      "pricePerUnit": 11.0,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "beef broth",
+        "beef stock"
+      ],
+      "pricePerUnit": 0.28,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "steak"
+      ],
+      "pricePerUnit": 12.0,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "beef"
+      ],
+      "pricePerUnit": 8.0,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "pork chop",
+        "pork chops"
+      ],
+      "pricePerUnit": 4.5,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "pork loin",
+        "pork tenderloin"
+      ],
+      "pricePerUnit": 4.0,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "pork shoulder",
+        "pork butt",
+        "boston butt"
+      ],
+      "pricePerUnit": 3.2,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "ground pork"
+      ],
+      "pricePerUnit": 4.0,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "bacon"
+      ],
+      "pricePerUnit": 6.5,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "italian sausage"
+      ],
+      "pricePerUnit": 4.8,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "breakfast sausage"
+      ],
+      "pricePerUnit": 4.2,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "chorizo"
+      ],
+      "pricePerUnit": 5.0,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "sausage"
+      ],
+      "pricePerUnit": 4.5,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "ham"
+      ],
+      "pricePerUnit": 4.5,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "pepperoni"
+      ],
+      "pricePerUnit": 0.4,
+      "unit": "oz"
+    },
+    {
+      "keywords": [
+        "pork"
+      ],
+      "pricePerUnit": 4.0,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "salmon"
+      ],
+      "pricePerUnit": 11.0,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "tilapia"
+      ],
+      "pricePerUnit": 6.5,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "cod"
+      ],
+      "pricePerUnit": 9.0,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "halibut"
+      ],
+      "pricePerUnit": 18.0,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "shrimp"
+      ],
+      "pricePerUnit": 10.0,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "canned tuna",
+        "tuna"
+      ],
+      "pricePerUnit": 1.25,
+      "unit": "can"
+    },
+    {
+      "keywords": [
+        "anchovy",
+        "anchovies"
+      ],
+      "pricePerUnit": 0.25,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "fish sauce"
+      ],
+      "pricePerUnit": 0.1,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "fish"
+      ],
+      "pricePerUnit": 9.0,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "ground turkey"
+      ],
+      "pricePerUnit": 5.0,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "turkey"
+      ],
+      "pricePerUnit": 3.5,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "tofu"
+      ],
+      "pricePerUnit": 2.8,
+      "unit": "lb"
+    },
+    {
+      "keywords": [
+        "egg",
+        "eggs"
+      ],
+      "pricePerUnit": 0.18,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "heavy cream",
+        "heavy whipping cream"
+      ],
+      "pricePerUnit": 0.4,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "half and half",
+        "half-and-half"
+      ],
+      "pricePerUnit": 0.3,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "buttermilk"
+      ],
+      "pricePerUnit": 0.35,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "milk"
+      ],
+      "pricePerUnit": 0.27,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "butter"
+      ],
+      "pricePerUnit": 0.12,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "cream cheese"
+      ],
+      "pricePerUnit": 0.3,
+      "unit": "oz"
+    },
+    {
+      "keywords": [
+        "sour cream"
+      ],
+      "pricePerUnit": 0.4,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "greek yogurt"
+      ],
+      "pricePerUnit": 0.7,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "yogurt"
+      ],
+      "pricePerUnit": 0.5,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "cottage cheese"
+      ],
+      "pricePerUnit": 0.4,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "mascarpone"
+      ],
+      "pricePerUnit": 0.55,
+      "unit": "oz"
+    },
+    {
+      "keywords": [
+        "ricotta",
+        "ricotta cheese"
+      ],
+      "pricePerUnit": 0.4,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "parmesan",
+        "parmigiano",
+        "parmesan cheese"
+      ],
+      "pricePerUnit": 0.5,
+      "unit": "oz"
+    },
+    {
+      "keywords": [
+        "feta",
+        "feta cheese"
+      ],
+      "pricePerUnit": 0.45,
+      "unit": "oz"
+    },
+    {
+      "keywords": [
+        "cotija",
+        "cotija cheese"
+      ],
+      "pricePerUnit": 0.5,
+      "unit": "oz"
+    },
+    {
+      "keywords": [
+        "goat cheese"
+      ],
+      "pricePerUnit": 0.55,
+      "unit": "oz"
+    },
+    {
+      "keywords": [
+        "cheddar",
+        "cheddar cheese"
+      ],
+      "pricePerUnit": 1.4,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "mozzarella"
+      ],
+      "pricePerUnit": 1.3,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "provolone"
+      ],
+      "pricePerUnit": 0.4,
+      "unit": "oz"
+    },
+    {
+      "keywords": [
+        "swiss",
+        "swiss cheese"
+      ],
+      "pricePerUnit": 0.4,
+      "unit": "oz"
+    },
+    {
+      "keywords": [
+        "cheese"
+      ],
+      "pricePerUnit": 1.35,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "bread flour"
+      ],
+      "pricePerUnit": 0.16,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "00 flour",
+        "tipo 00"
+      ],
+      "pricePerUnit": 0.22,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "whole wheat flour"
+      ],
+      "pricePerUnit": 0.14,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "flour",
+        "all purpose flour",
+        "all-purpose flour"
+      ],
+      "pricePerUnit": 0.12,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "cornstarch",
+        "corn starch"
+      ],
+      "pricePerUnit": 0.03,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "rolled oats",
+        "oats",
+        "oatmeal"
+      ],
+      "pricePerUnit": 0.1,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "quinoa"
+      ],
+      "pricePerUnit": 0.4,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "rice"
+      ],
+      "pricePerUnit": 0.12,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "pasta",
+        "spaghetti",
+        "penne",
+        "macaroni",
+        "noodle",
+        "linguine",
+        "fettuccine"
+      ],
+      "pricePerUnit": 0.12,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "breadcrumbs",
+        "panko"
+      ],
+      "pricePerUnit": 0.15,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "sourdough"
+      ],
+      "pricePerUnit": 0.35,
+      "unit": "slice"
+    },
+    {
+      "keywords": [
+        "flour tortilla",
+        "flour tortillas"
+      ],
+      "pricePerUnit": 0.2,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "corn tortilla",
+        "corn tortillas"
+      ],
+      "pricePerUnit": 0.12,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "tortilla"
+      ],
+      "pricePerUnit": 0.18,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "bread",
+        "roll"
+      ],
+      "pricePerUnit": 0.2,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "bagel"
+      ],
+      "pricePerUnit": 0.7,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "croissant"
+      ],
+      "pricePerUnit": 1.25,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "crouton",
+        "croutons"
+      ],
+      "pricePerUnit": 0.12,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "ladyfinger",
+        "ladyfinger biscuit",
+        "ladyfinger biscuits"
+      ],
+      "pricePerUnit": 0.25,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "yeast",
+        "instant yeast",
+        "baking yeast"
+      ],
+      "pricePerUnit": 0.12,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "yellow onion",
+        "yellow onions",
+        "white onion"
+      ],
+      "pricePerUnit": 0.4,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "red onion"
+      ],
+      "pricePerUnit": 0.5,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "shallot",
+        "shallots"
+      ],
+      "pricePerUnit": 0.4,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "green onion",
+        "scallion",
+        "green onions",
+        "scallions"
+      ],
+      "pricePerUnit": 0.12,
+      "unit": "stalk"
+    },
+    {
+      "keywords": [
+        "onion"
+      ],
+      "pricePerUnit": 0.4,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "garlic"
+      ],
+      "pricePerUnit": 0.08,
+      "unit": "clove"
+    },
+    {
+      "keywords": [
+        "ginger"
+      ],
+      "pricePerUnit": 0.15,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "jalapeno",
+        "jalape\u00f1o"
+      ],
+      "pricePerUnit": 0.2,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "russet potato",
+        "russet potatoes"
+      ],
+      "pricePerUnit": 0.25,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "baby potatoes",
+        "yellow potatoes"
+      ],
+      "pricePerUnit": 0.2,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "potato",
+        "potatoes"
+      ],
+      "pricePerUnit": 0.25,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "carrot",
+        "carrots"
+      ],
+      "pricePerUnit": 0.15,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "celery"
+      ],
+      "pricePerUnit": 0.18,
+      "unit": "stalk"
+    },
+    {
+      "keywords": [
+        "bell pepper",
+        "bell peppers"
+      ],
+      "pricePerUnit": 0.9,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "cremini mushrooms",
+        "cremini",
+        "baby bella"
+      ],
+      "pricePerUnit": 0.7,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "mushroom",
+        "mushrooms"
+      ],
+      "pricePerUnit": 0.6,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "broccoli"
+      ],
+      "pricePerUnit": 0.5,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "zucchini",
+        "squash"
+      ],
+      "pricePerUnit": 0.7,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "butternut squash",
+        "butternut"
+      ],
+      "pricePerUnit": 1.5,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "cucumber"
+      ],
+      "pricePerUnit": 0.7,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "lettuce"
+      ],
+      "pricePerUnit": 1.8,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "spinach",
+        "kale"
+      ],
+      "pricePerUnit": 0.4,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "cabbage"
+      ],
+      "pricePerUnit": 1.8,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "tomato",
+        "tomatoes"
+      ],
+      "pricePerUnit": 0.6,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "avocado"
+      ],
+      "pricePerUnit": 1.2,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "corn",
+        "ear of corn"
+      ],
+      "pricePerUnit": 0.5,
+      "unit": "ear"
+    },
+    {
+      "keywords": [
+        "peas"
+      ],
+      "pricePerUnit": 0.25,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "apple",
+        "apples"
+      ],
+      "pricePerUnit": 0.7,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "banana"
+      ],
+      "pricePerUnit": 0.22,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "lemon juice"
+      ],
+      "pricePerUnit": 0.1,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "lime juice"
+      ],
+      "pricePerUnit": 0.1,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "lemon"
+      ],
+      "pricePerUnit": 0.5,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "lime"
+      ],
+      "pricePerUnit": 0.4,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "strawberry",
+        "strawberries",
+        "blueberry",
+        "blueberries"
+      ],
+      "pricePerUnit": 2.5,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "artichoke"
+      ],
+      "pricePerUnit": 2.5,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "frozen peas",
+        "frozen spinach",
+        "frozen corn",
+        "frozen vegetables",
+        "frozen vegetable"
+      ],
+      "pricePerUnit": 0.3,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "black bean",
+        "black beans"
+      ],
+      "pricePerUnit": 0.35,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "kidney bean",
+        "kidney beans"
+      ],
+      "pricePerUnit": 0.35,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "pinto bean",
+        "pinto beans"
+      ],
+      "pricePerUnit": 0.3,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "chickpea",
+        "chickpeas",
+        "garbanzo"
+      ],
+      "pricePerUnit": 0.35,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "bean",
+        "beans"
+      ],
+      "pricePerUnit": 0.35,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "lentil",
+        "lentils"
+      ],
+      "pricePerUnit": 0.25,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "vegetable broth",
+        "vegetable stock"
+      ],
+      "pricePerUnit": 0.25,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "broth",
+        "stock",
+        "soup"
+      ],
+      "pricePerUnit": 0.25,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "bouillon",
+        "bouillon cube"
+      ],
+      "pricePerUnit": 0.2,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "san marzano"
+      ],
+      "pricePerUnit": 0.22,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "crushed tomatoes",
+        "canned crushed tomatoes"
+      ],
+      "pricePerUnit": 0.12,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "diced tomato",
+        "diced tomatoes",
+        "canned tomatoes"
+      ],
+      "pricePerUnit": 0.12,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "tomato paste"
+      ],
+      "pricePerUnit": 0.1,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "passata"
+      ],
+      "pricePerUnit": 0.12,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "pizza sauce"
+      ],
+      "pricePerUnit": 0.12,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "marinara",
+        "tomato sauce"
+      ],
+      "pricePerUnit": 0.1,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "pesto"
+      ],
+      "pricePerUnit": 0.25,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "bbq sauce",
+        "barbecue sauce"
+      ],
+      "pricePerUnit": 0.08,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "salsa"
+      ],
+      "pricePerUnit": 0.1,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "olive oil"
+      ],
+      "pricePerUnit": 0.18,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "avocado oil"
+      ],
+      "pricePerUnit": 0.22,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "sesame oil"
+      ],
+      "pricePerUnit": 0.2,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "vegetable oil",
+        "canola oil",
+        "neutral oil",
+        "cooking oil"
+      ],
+      "pricePerUnit": 0.08,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "oil"
+      ],
+      "pricePerUnit": 0.1,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "balsamic glaze"
+      ],
+      "pricePerUnit": 0.15,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "balsamic",
+        "balsamic vinegar"
+      ],
+      "pricePerUnit": 0.12,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "apple cider vinegar"
+      ],
+      "pricePerUnit": 0.06,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "red wine vinegar"
+      ],
+      "pricePerUnit": 0.07,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "rice vinegar"
+      ],
+      "pricePerUnit": 0.06,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "white vinegar",
+        "vinegar"
+      ],
+      "pricePerUnit": 0.03,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "soy sauce"
+      ],
+      "pricePerUnit": 0.06,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "worcestershire sauce"
+      ],
+      "pricePerUnit": 0.07,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "oyster sauce"
+      ],
+      "pricePerUnit": 0.12,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "mirin"
+      ],
+      "pricePerUnit": 0.12,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "tahini"
+      ],
+      "pricePerUnit": 0.18,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "peanut butter",
+        "peanuts"
+      ],
+      "pricePerUnit": 0.1,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "dijon mustard",
+        "dijon"
+      ],
+      "pricePerUnit": 0.1,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "ketchup"
+      ],
+      "pricePerUnit": 0.06,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "mustard"
+      ],
+      "pricePerUnit": 0.06,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "mayonnaise",
+        "mayo"
+      ],
+      "pricePerUnit": 0.08,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "sriracha"
+      ],
+      "pricePerUnit": 0.06,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "gochujang",
+        "korean chili paste"
+      ],
+      "pricePerUnit": 0.18,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "hot sauce"
+      ],
+      "pricePerUnit": 0.06,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "curry paste",
+        "green curry paste"
+      ],
+      "pricePerUnit": 0.2,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "salad dressing",
+        "dressing",
+        "ranch"
+      ],
+      "pricePerUnit": 0.12,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "honey"
+      ],
+      "pricePerUnit": 0.12,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "maple syrup"
+      ],
+      "pricePerUnit": 0.18,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "syrup"
+      ],
+      "pricePerUnit": 0.1,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "jam",
+        "jelly",
+        "preserves"
+      ],
+      "pricePerUnit": 0.1,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "pickle",
+        "relish"
+      ],
+      "pricePerUnit": 0.12,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "kalamata olives",
+        "kalamata"
+      ],
+      "pricePerUnit": 0.35,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "olives"
+      ],
+      "pricePerUnit": 0.25,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "capers",
+        "caper"
+      ],
+      "pricePerUnit": 0.15,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "sun-dried tomatoes",
+        "sun dried tomatoes"
+      ],
+      "pricePerUnit": 0.25,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "coconut milk"
+      ],
+      "pricePerUnit": 0.3,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "bamboo shoots",
+        "bamboo shoot"
+      ],
+      "pricePerUnit": 0.2,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "kosher salt"
+      ],
+      "pricePerUnit": 0.01,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "salt"
+      ],
+      "pricePerUnit": 0.01,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "black peppercorns",
+        "peppercorns"
+      ],
+      "pricePerUnit": 0.04,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "black pepper",
+        "pepper"
+      ],
+      "pricePerUnit": 0.03,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "garlic powder"
+      ],
+      "pricePerUnit": 0.03,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "onion powder"
+      ],
+      "pricePerUnit": 0.03,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "smoked paprika"
+      ],
+      "pricePerUnit": 0.04,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "paprika"
+      ],
+      "pricePerUnit": 0.03,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "chili powder"
+      ],
+      "pricePerUnit": 0.03,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "cayenne"
+      ],
+      "pricePerUnit": 0.04,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "red pepper flakes",
+        "chili flakes"
+      ],
+      "pricePerUnit": 0.03,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "cumin"
+      ],
+      "pricePerUnit": 0.03,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "curry powder",
+        "curry"
+      ],
+      "pricePerUnit": 0.04,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "garam masala"
+      ],
+      "pricePerUnit": 0.05,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "turmeric"
+      ],
+      "pricePerUnit": 0.03,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "italian seasoning"
+      ],
+      "pricePerUnit": 0.03,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "taco seasoning"
+      ],
+      "pricePerUnit": 0.05,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "cinnamon"
+      ],
+      "pricePerUnit": 0.03,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "nutmeg"
+      ],
+      "pricePerUnit": 0.05,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "cloves",
+        "clove spice"
+      ],
+      "pricePerUnit": 0.05,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "dill seeds",
+        "dill seed"
+      ],
+      "pricePerUnit": 0.04,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "bay leaf",
+        "bay leaves"
+      ],
+      "pricePerUnit": 0.05,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "basil"
+      ],
+      "pricePerUnit": 0.04,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "oregano"
+      ],
+      "pricePerUnit": 0.03,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "thyme"
+      ],
+      "pricePerUnit": 0.04,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "rosemary"
+      ],
+      "pricePerUnit": 0.04,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "parsley"
+      ],
+      "pricePerUnit": 0.03,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "cilantro"
+      ],
+      "pricePerUnit": 0.04,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "dill"
+      ],
+      "pricePerUnit": 0.04,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "sesame seeds",
+        "sesame seed"
+      ],
+      "pricePerUnit": 0.1,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "pine nuts",
+        "pine nut"
+      ],
+      "pricePerUnit": 0.6,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "brown sugar"
+      ],
+      "pricePerUnit": 0.05,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "powdered sugar",
+        "confectioners sugar"
+      ],
+      "pricePerUnit": 0.04,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "sugar"
+      ],
+      "pricePerUnit": 0.04,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "baking soda"
+      ],
+      "pricePerUnit": 0.01,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "baking powder"
+      ],
+      "pricePerUnit": 0.02,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "vanilla extract",
+        "extract"
+      ],
+      "pricePerUnit": 0.2,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "cocoa",
+        "cocoa powder"
+      ],
+      "pricePerUnit": 0.12,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "dark chocolate"
+      ],
+      "pricePerUnit": 0.25,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "white chocolate"
+      ],
+      "pricePerUnit": 0.22,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "chocolate chips",
+        "chips"
+      ],
+      "pricePerUnit": 0.15,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "chocolate"
+      ],
+      "pricePerUnit": 0.2,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "lemon zest",
+        "lime zest",
+        "zest"
+      ],
+      "pricePerUnit": 0.15,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "marsala wine",
+        "marsala"
+      ],
+      "pricePerUnit": 1.8,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "white wine"
+      ],
+      "pricePerUnit": 1.5,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "red wine"
+      ],
+      "pricePerUnit": 1.5,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "wine"
+      ],
+      "pricePerUnit": 1.5,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "coffee liqueur",
+        "kahlua",
+        "kaahlua"
+      ],
+      "pricePerUnit": 1.5,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "espresso",
+        "strong coffee"
+      ],
+      "pricePerUnit": 0.4,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "coffee"
+      ],
+      "pricePerUnit": 0.15,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "ice cream"
+      ],
+      "pricePerUnit": 0.5,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "frozen waffle",
+        "waffle"
+      ],
+      "pricePerUnit": 0.4,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "pancake"
+      ],
+      "pricePerUnit": 0.15,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "cereal",
+        "granola"
+      ],
+      "pricePerUnit": 0.2,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "muffin",
+        "biscuit",
+        "scone"
+      ],
+      "pricePerUnit": 0.75,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "water"
+      ],
+      "pricePerUnit": 0,
+      "unit": "g"
+    }
   ],
   "restaurantPrices": [
-    {"keywords": ["steak", "ribeye", "filet", "portobello steak"], "minPrice": 28, "maxPrice": 55, "category": "steakhouse"},
-    {"keywords": ["lobster", "crab", "seafood platter"], "minPrice": 35, "maxPrice": 65, "category": "seafood"},
-    {"keywords": ["salmon", "fish and chips", "grilled fish"], "minPrice": 22, "maxPrice": 38, "category": "seafood"},
-    {"keywords": ["shrimp scampi", "shrimp cocktail"], "minPrice": 20, "maxPrice": 32, "category": "seafood"},
-    {"keywords": ["pasta", "spaghetti", "penne", "macaroni", "linguine", "fettuccine"], "minPrice": 14, "maxPrice": 22, "category": "italian"},
-    {"keywords": ["pizza"], "minPrice": 14, "maxPrice": 22, "category": "italian"},
-    {"keywords": ["risotto"], "minPrice": 16, "maxPrice": 26, "category": "italian"},
-    {"keywords": ["lasagna", "casserole"], "minPrice": 14, "maxPrice": 20, "category": "italian"},
-    {"keywords": ["chicken marsala", "chicken piccata", "chickenfredo"], "minPrice": 18, "maxPrice": 28, "category": "italian"},
-    {"keywords": ["chicken parmesan", "chicken parmigiana"], "minPrice": 16, "maxPrice": 24, "category": "italian"},
-    {"keywords": ["fried chicken", "crispy chicken"], "minPrice": 14, "maxPrice": 20, "category": "american"},
-    {"keywords": ["grilled chicken", "roasted chicken", "chicken breast"], "minPrice": 14, "maxPrice": 22, "category": "american"},
-    {"keywords": ["chicken salad", "caesar salad"], "minPrice": 12, "maxPrice": 18, "category": "salad"},
-    {"keywords": ["chicken"], "minPrice": 14, "maxPrice": 22, "category": "american"},
-    {"keywords": ["burger", "hamburger", "cheeseburger"], "minPrice": 12, "maxPrice": 18, "category": "american"},
-    {"keywords": ["sandwich", "sub", "hoagie", "panini"], "minPrice": 10, "maxPrice": 16, "category": "american"},
-    {"keywords": ["taco", "tacos", "burrito", "fajita"], "minPrice": 10, "maxPrice": 16, "category": "mexican"},
-    {"keywords": ["quesadilla", "nachos"], "minPrice": 9, "maxPrice": 14, "category": "mexican"},
-    {"keywords": ["sushi", "sashimi"], "minPrice": 18, "maxPrice": 35, "category": "japanese"},
-    {"keywords": ["ramen", "noodle soup"], "minPrice": 12, "maxPrice": 18, "category": "asian"},
-    {"keywords": ["stir fry", "pad thai", "curry"], "minPrice": 13, "maxPrice": 19, "category": "asian"},
-    {"keywords": ["dumpling", "spring roll", "egg roll"], "minPrice": 8, "maxPrice": 14, "category": "asian"},
-    {"keywords": ["pancake", "waffle", "french toast"], "minPrice": 8, "maxPrice": 14, "category": "breakfast"},
-    {"keywords": ["omelette", "omelet", "eggs"], "minPrice": 9, "maxPrice": 15, "category": "breakfast"},
-    {"keywords": ["breakfast burrito", "breakfast sandwich"], "minPrice": 8, "maxPrice": 12, "category": "breakfast"},
-    {"keywords": ["cereal", "oatmeal", "granola"], "minPrice": 5, "maxPrice": 9, "category": "breakfast"},
-    {"keywords": ["muffin", "scone", "biscuit"], "minPrice": 3, "maxPrice": 6, "category": "bakery"},
-    {"keywords": ["bagel", "croissant"], "minPrice": 3, "maxPrice": 5, "category": "bakery"},
-    {"keywords": ["soup"], "minPrice": 5, "maxPrice": 9, "category": "soup"},
-    {"keywords": ["salad"], "minPrice": 8, "maxPrice": 14, "category": "salad"},
-    {"keywords": ["fries", "french fry", "side"], "minPrice": 4, "maxPrice": 8, "category": "side"},
-    {"keywords": ["cake", "pie", "brownie", "cookie", "ice cream"], "minPrice": 7, "maxPrice": 12, "category": "dessert"},
-    {"keywords": ["pudding", "custard", "mousse"], "minPrice": 6, "maxPrice": 10, "category": "dessert"},
-    {"keywords": ["cheesecake", "tiramisu"], "minPrice": 8, "maxPrice": 14, "category": "dessert"},
-    {"keywords": ["smoothie", "shake"], "minPrice": 5, "maxPrice": 8, "category": "drink"},
-    {"keywords": ["coffee", "latte", "cappuccino"], "minPrice": 3, "maxPrice": 6, "category": "drink"},
-    {"keywords": ["juice", "lemonade"], "minPrice": 3, "maxPrice": 5, "category": "drink"},
-    {"keywords": ["dinner", "entree", "main"], "minPrice": 14, "maxPrice": 22, "category": "dinner"},
-    {"keywords": ["lunch"], "minPrice": 10, "maxPrice": 16, "category": "lunch"},
-    {"keywords": ["snack", "appetizer", "starter"], "minPrice": 6, "maxPrice": 12, "category": "appetizer"}
+    {
+      "keywords": [
+        "filet mignon",
+        "filet"
+      ],
+      "minPrice": 38,
+      "maxPrice": 68,
+      "category": "steakhouse"
+    },
+    {
+      "keywords": [
+        "ribeye",
+        "porterhouse"
+      ],
+      "minPrice": 32,
+      "maxPrice": 62,
+      "category": "steakhouse"
+    },
+    {
+      "keywords": [
+        "steak",
+        "sirloin"
+      ],
+      "minPrice": 24,
+      "maxPrice": 48,
+      "category": "steakhouse"
+    },
+    {
+      "keywords": [
+        "lobster",
+        "crab",
+        "seafood platter"
+      ],
+      "minPrice": 36,
+      "maxPrice": 70,
+      "category": "seafood"
+    },
+    {
+      "keywords": [
+        "fish and chips"
+      ],
+      "minPrice": 16,
+      "maxPrice": 24,
+      "category": "seafood"
+    },
+    {
+      "keywords": [
+        "salmon",
+        "grilled fish"
+      ],
+      "minPrice": 22,
+      "maxPrice": 38,
+      "category": "seafood"
+    },
+    {
+      "keywords": [
+        "shrimp scampi",
+        "shrimp cocktail"
+      ],
+      "minPrice": 18,
+      "maxPrice": 32,
+      "category": "seafood"
+    },
+    {
+      "keywords": [
+        "chicken parmesan",
+        "chicken parmigiana"
+      ],
+      "minPrice": 16,
+      "maxPrice": 26,
+      "category": "italian"
+    },
+    {
+      "keywords": [
+        "chicken marsala",
+        "chicken piccata"
+      ],
+      "minPrice": 18,
+      "maxPrice": 28,
+      "category": "italian"
+    },
+    {
+      "keywords": [
+        "lasagna",
+        "casserole"
+      ],
+      "minPrice": 14,
+      "maxPrice": 22,
+      "category": "italian"
+    },
+    {
+      "keywords": [
+        "risotto"
+      ],
+      "minPrice": 16,
+      "maxPrice": 28,
+      "category": "italian"
+    },
+    {
+      "keywords": [
+        "pizza"
+      ],
+      "minPrice": 14,
+      "maxPrice": 24,
+      "category": "italian"
+    },
+    {
+      "keywords": [
+        "pasta",
+        "spaghetti",
+        "penne",
+        "macaroni",
+        "linguine",
+        "fettuccine"
+      ],
+      "minPrice": 14,
+      "maxPrice": 24,
+      "category": "italian"
+    },
+    {
+      "keywords": [
+        "fried chicken",
+        "crispy chicken"
+      ],
+      "minPrice": 14,
+      "maxPrice": 22,
+      "category": "american"
+    },
+    {
+      "keywords": [
+        "grilled chicken",
+        "roasted chicken",
+        "chicken breast"
+      ],
+      "minPrice": 14,
+      "maxPrice": 24,
+      "category": "american"
+    },
+    {
+      "keywords": [
+        "chicken salad",
+        "caesar salad"
+      ],
+      "minPrice": 12,
+      "maxPrice": 18,
+      "category": "salad"
+    },
+    {
+      "keywords": [
+        "cheeseburger",
+        "hamburger",
+        "burger"
+      ],
+      "minPrice": 12,
+      "maxPrice": 20,
+      "category": "american"
+    },
+    {
+      "keywords": [
+        "sandwich",
+        "sub",
+        "hoagie",
+        "panini"
+      ],
+      "minPrice": 10,
+      "maxPrice": 18,
+      "category": "american"
+    },
+    {
+      "keywords": [
+        "taco",
+        "tacos",
+        "burrito",
+        "fajita"
+      ],
+      "minPrice": 10,
+      "maxPrice": 18,
+      "category": "mexican"
+    },
+    {
+      "keywords": [
+        "quesadilla",
+        "nachos"
+      ],
+      "minPrice": 9,
+      "maxPrice": 16,
+      "category": "mexican"
+    },
+    {
+      "keywords": [
+        "sushi",
+        "sashimi"
+      ],
+      "minPrice": 18,
+      "maxPrice": 38,
+      "category": "japanese"
+    },
+    {
+      "keywords": [
+        "ramen",
+        "noodle soup"
+      ],
+      "minPrice": 13,
+      "maxPrice": 20,
+      "category": "asian"
+    },
+    {
+      "keywords": [
+        "stir fry",
+        "pad thai",
+        "curry"
+      ],
+      "minPrice": 13,
+      "maxPrice": 20,
+      "category": "asian"
+    },
+    {
+      "keywords": [
+        "dumpling",
+        "spring roll",
+        "egg roll"
+      ],
+      "minPrice": 8,
+      "maxPrice": 15,
+      "category": "asian"
+    },
+    {
+      "keywords": [
+        "pancake",
+        "waffle",
+        "french toast"
+      ],
+      "minPrice": 9,
+      "maxPrice": 16,
+      "category": "breakfast"
+    },
+    {
+      "keywords": [
+        "omelette",
+        "omelet",
+        "eggs"
+      ],
+      "minPrice": 10,
+      "maxPrice": 16,
+      "category": "breakfast"
+    },
+    {
+      "keywords": [
+        "breakfast burrito",
+        "breakfast sandwich"
+      ],
+      "minPrice": 8,
+      "maxPrice": 14,
+      "category": "breakfast"
+    },
+    {
+      "keywords": [
+        "cereal",
+        "oatmeal",
+        "granola"
+      ],
+      "minPrice": 5,
+      "maxPrice": 10,
+      "category": "breakfast"
+    },
+    {
+      "keywords": [
+        "muffin",
+        "scone",
+        "biscuit"
+      ],
+      "minPrice": 3,
+      "maxPrice": 7,
+      "category": "bakery"
+    },
+    {
+      "keywords": [
+        "bagel",
+        "croissant"
+      ],
+      "minPrice": 3,
+      "maxPrice": 6,
+      "category": "bakery"
+    },
+    {
+      "keywords": [
+        "soup"
+      ],
+      "minPrice": 5,
+      "maxPrice": 10,
+      "category": "soup"
+    },
+    {
+      "keywords": [
+        "salad"
+      ],
+      "minPrice": 8,
+      "maxPrice": 16,
+      "category": "salad"
+    },
+    {
+      "keywords": [
+        "fries",
+        "french fry",
+        "side"
+      ],
+      "minPrice": 4,
+      "maxPrice": 9,
+      "category": "side"
+    },
+    {
+      "keywords": [
+        "cheesecake",
+        "tiramisu"
+      ],
+      "minPrice": 8,
+      "maxPrice": 14,
+      "category": "dessert"
+    },
+    {
+      "keywords": [
+        "cake",
+        "pie",
+        "brownie",
+        "cookie",
+        "ice cream"
+      ],
+      "minPrice": 7,
+      "maxPrice": 13,
+      "category": "dessert"
+    },
+    {
+      "keywords": [
+        "pudding",
+        "custard",
+        "mousse"
+      ],
+      "minPrice": 6,
+      "maxPrice": 11,
+      "category": "dessert"
+    },
+    {
+      "keywords": [
+        "smoothie",
+        "shake"
+      ],
+      "minPrice": 5,
+      "maxPrice": 9,
+      "category": "drink"
+    },
+    {
+      "keywords": [
+        "coffee",
+        "latte",
+        "cappuccino"
+      ],
+      "minPrice": 3,
+      "maxPrice": 7,
+      "category": "drink"
+    },
+    {
+      "keywords": [
+        "juice",
+        "lemonade"
+      ],
+      "minPrice": 3,
+      "maxPrice": 6,
+      "category": "drink"
+    },
+    {
+      "keywords": [
+        "dinner",
+        "entree",
+        "main"
+      ],
+      "minPrice": 16,
+      "maxPrice": 28,
+      "category": "dinner"
+    },
+    {
+      "keywords": [
+        "lunch"
+      ],
+      "minPrice": 11,
+      "maxPrice": 18,
+      "category": "lunch"
+    },
+    {
+      "keywords": [
+        "snack",
+        "appetizer",
+        "starter"
+      ],
+      "minPrice": 7,
+      "maxPrice": 14,
+      "category": "appetizer"
+    },
+    {
+      "keywords": [
+        "chicken"
+      ],
+      "minPrice": 14,
+      "maxPrice": 24,
+      "category": "american"
+    }
   ],
   "unitMultipliers": {
-    "lb": {"oz": 0.0625, "g": 453.6, "piece": 0.5, "cup": 0.5},
-    "cup": {"tbsp": 16, "tsp": 48, "ml": 236.6, "piece": 1, "g": 120},
-    "tbsp": {"tsp": 3, "ml": 14.8, "g": 15},
-    "tsp": {"ml": 4.93, "g": 5},
-    "piece": {"oz": 0.25, "g": 50},
-    "oz": {"g": 28.35, "lb": 0.0625},
-    "g": {"lb": 0.00227, "oz": 0.0353, "cup": 0.0083, "tbsp": 0.067, "tsp": 0.2, "piece": 0.0067, "clove": 0.33, "stalk": 0.05, "ear": 0.0125, "slice": 0.05},
-    "ml": {"cup": 0.00423, "tbsp": 0.0676, "tsp": 0.208, "g": 1, "piece": 0.00423, "slice": 0.05},
-    "slice": {"piece": 1, "g": 20},
-    "clove": {"piece": 1, "g": 3},
-    "ear": {"piece": 1},
-    "stalk": {"piece": 1}
+    "lb": {
+      "oz": 16,
+      "g": 453.592,
+      "kg": 0.453592
+    },
+    "oz": {
+      "lb": 0.0625,
+      "g": 28.3495,
+      "kg": 0.0283495
+    },
+    "g": {
+      "lb": 0.00220462,
+      "oz": 0.035274,
+      "kg": 0.001,
+      "ml": 1
+    },
+    "kg": {
+      "g": 1000,
+      "lb": 2.20462,
+      "oz": 35.274
+    },
+    "cup": {
+      "tbsp": 16,
+      "tsp": 48,
+      "ml": 236.588,
+      "fl oz": 8,
+      "pint": 0.5,
+      "quart": 0.25,
+      "gallon": 0.0625
+    },
+    "tbsp": {
+      "tsp": 3,
+      "cup": 0.0625,
+      "ml": 14.7868,
+      "fl oz": 0.5
+    },
+    "tsp": {
+      "tbsp": 0.333333,
+      "cup": 0.0208333,
+      "ml": 4.92892
+    },
+    "ml": {
+      "cup": 0.00422675,
+      "tbsp": 0.067628,
+      "tsp": 0.202884,
+      "fl oz": 0.033814,
+      "g": 1,
+      "l": 0.001
+    },
+    "fl oz": {
+      "ml": 29.5735,
+      "cup": 0.125,
+      "tbsp": 2,
+      "tsp": 6
+    },
+    "pint": {
+      "cup": 2,
+      "ml": 473.176,
+      "fl oz": 16,
+      "quart": 0.5
+    },
+    "quart": {
+      "cup": 4,
+      "pint": 2,
+      "ml": 946.353,
+      "gallon": 0.25
+    },
+    "gallon": {
+      "cup": 16,
+      "pint": 8,
+      "quart": 4,
+      "ml": 3785.41
+    },
+    "piece": {
+      "g": 50,
+      "oz": 1.76
+    },
+    "slice": {
+      "piece": 1,
+      "g": 28,
+      "oz": 0.99
+    },
+    "clove": {
+      "piece": 1,
+      "g": 5
+    },
+    "stalk": {
+      "piece": 1,
+      "g": 40
+    },
+    "ear": {
+      "piece": 1,
+      "g": 150
+    },
+    "can": {
+      "oz": 5,
+      "g": 142,
+      "cup": 0.625,
+      "ml": 148
+    }
   }
 }
