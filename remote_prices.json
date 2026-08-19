@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.2.1",
   "updated": "2026-08-18",
   "notes": "unitMultipliers[from][to] = how many `to` units equal 1 `from` unit. App converts primarily via density/grams; this table is fallback only. Prefer specific keywords (chicken breast) over generic (chicken).",
   "ingredientPrices": [
@@ -730,7 +730,7 @@
     {
       "keywords": [
         "jalapeno",
-        "jalape\u00f1o"
+        "jalapeño"
       ],
       "pricePerUnit": 0.2,
       "unit": "piece"
@@ -2117,10 +2117,65 @@
     },
     {
       "keywords": [
+        "chocolate chip cookie",
+        "chocolate chip cookies"
+      ],
+      "minPrice": 2.5,
+      "maxPrice": 4.5,
+      "category": "bakery"
+    },
+    {
+      "keywords": [
+        "cookie",
+        "cookies"
+      ],
+      "minPrice": 2.5,
+      "maxPrice": 4.5,
+      "category": "bakery"
+    },
+    {
+      "keywords": [
+        "brownie"
+      ],
+      "minPrice": 3,
+      "maxPrice": 5,
+      "category": "bakery"
+    },
+    {
+      "keywords": [
+        "focaccia",
+        "banana bread"
+      ],
+      "minPrice": 4,
+      "maxPrice": 7,
+      "category": "bakery"
+    },
+    {
+      "keywords": [
+        "creme brulee",
+        "crème brûlée",
+        "brulee",
+        "posset",
+        "panna cotta"
+      ],
+      "minPrice": 8,
+      "maxPrice": 14,
+      "category": "dessert"
+    },
+    {
+      "keywords": [
+        "tarte tatin",
+        "apple tart",
+        "tart"
+      ],
+      "minPrice": 7,
+      "maxPrice": 12,
+      "category": "dessert"
+    },
+    {
+      "keywords": [
         "cake",
         "pie",
-        "brownie",
-        "cookie",
         "ice cream"
       ],
       "minPrice": 7,
