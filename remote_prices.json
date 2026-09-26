@@ -1,12 +1,15 @@
 {
-  "version": "1.2.1",
-  "updated": "2026-08-18",
-  "notes": "unitMultipliers[from][to] = how many `to` units equal 1 `from` unit. App converts primarily via density/grams; this table is fallback only. Prefer specific keywords (chicken breast) over generic (chicken).",
+  "version": "1.3.0",
+  "updated": "2026-09-26",
+  "notes": "unitMultipliers[from][to] = how many `to` units equal 1 `from` unit. App converts primarily via density/grams; this table is fallback only. Prefer specific keywords (chicken breast, yellow onion) over generic (chicken, onion). Match against the full ingredient name AND the part before the comma. v1.3.0 adds aliases for every EasyRecipeBox seed-recipe string so names like \"yellow onion, sliced\" resolve.",
   "ingredientPrices": [
     {
       "keywords": [
         "chicken breast",
-        "boneless skinless chicken breast"
+        "boneless skinless chicken breast",
+        "chicken breasts",
+        "chicken breast halves",
+        "grilled chicken breast"
       ],
       "pricePerUnit": 4.15,
       "unit": "lb"
@@ -16,7 +19,9 @@
         "chicken thigh",
         "chicken thighs",
         "bone-in chicken thigh",
-        "boneless chicken thigh"
+        "boneless chicken thigh",
+        "chicken thighs, bone-in",
+        "chicken thighs, bone-in skin-on"
       ],
       "pricePerUnit": 2.8,
       "unit": "lb"
@@ -56,7 +61,8 @@
     {
       "keywords": [
         "chicken broth",
-        "chicken stock"
+        "chicken stock",
+        "vegetable or chicken broth"
       ],
       "pricePerUnit": 0.25,
       "unit": "cup"
@@ -263,7 +269,9 @@
     },
     {
       "keywords": [
-        "salmon"
+        "salmon",
+        "salmon fillets",
+        "salmon fillet"
       ],
       "pricePerUnit": 11.0,
       "unit": "lb"
@@ -291,7 +299,8 @@
     },
     {
       "keywords": [
-        "shrimp"
+        "shrimp",
+        "large shrimp"
       ],
       "pricePerUnit": 10.0,
       "unit": "lb"
@@ -307,7 +316,9 @@
     {
       "keywords": [
         "anchovy",
-        "anchovies"
+        "anchovies",
+        "anchovy fillets",
+        "anchovy fillets, mashed"
       ],
       "pricePerUnit": 0.25,
       "unit": "piece"
@@ -321,7 +332,10 @@
     },
     {
       "keywords": [
-        "fish"
+        "fish",
+        "white fish",
+        "white fish fillets",
+        "white fish fillets (cod or halibut)"
       ],
       "pricePerUnit": 9.0,
       "unit": "lb"
@@ -350,7 +364,17 @@
     {
       "keywords": [
         "egg",
-        "eggs"
+        "eggs",
+        "egg yolk",
+        "egg yolks",
+        "eggs, beaten",
+        "eggs, separated",
+        "egg, beaten (for egg wash)",
+        "egg, beaten",
+        "large eggs",
+        "large egg",
+        "large egg yolks",
+        "large egg yolk"
       ],
       "pricePerUnit": 0.18,
       "unit": "piece"
@@ -380,16 +404,31 @@
     },
     {
       "keywords": [
-        "milk"
+        "milk",
+        "whole milk",
+        "warm milk"
       ],
       "pricePerUnit": 0.27,
       "unit": "cup"
     },
     {
       "keywords": [
-        "butter"
+        "butter",
+        "salted butter",
+        "unsalted butter",
+        "butter, softened",
+        "butter, melted"
       ],
       "pricePerUnit": 0.12,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "chicken fat",
+        "schmaltz",
+        "chicken fat or neutral oil"
+      ],
+      "pricePerUnit": 0.1,
       "unit": "tbsp"
     },
     {
@@ -415,7 +454,9 @@
     },
     {
       "keywords": [
-        "yogurt"
+        "yogurt",
+        "plain yogurt",
+        "plain yogurt with live cultures"
       ],
       "pricePerUnit": 0.5,
       "unit": "cup"
@@ -429,7 +470,8 @@
     },
     {
       "keywords": [
-        "mascarpone"
+        "mascarpone",
+        "mascarpone cheese"
       ],
       "pricePerUnit": 0.55,
       "unit": "oz"
@@ -449,6 +491,16 @@
         "parmesan cheese"
       ],
       "pricePerUnit": 0.5,
+      "unit": "oz"
+    },
+    {
+      "keywords": [
+        "pecorino",
+        "pecorino romano",
+        "pecorino romano cheese",
+        "romano cheese"
+      ],
+      "pricePerUnit": 0.55,
       "unit": "oz"
     },
     {
@@ -476,15 +528,40 @@
     },
     {
       "keywords": [
+        "gruyere",
+        "gruyère",
+        "gruyere cheese",
+        "gruyère cheese",
+        "gruyere cheese, grated"
+      ],
+      "pricePerUnit": 0.55,
+      "unit": "oz"
+    },
+    {
+      "keywords": [
         "cheddar",
-        "cheddar cheese"
+        "cheddar cheese",
+        "sharp cheddar",
+        "sharp cheddar cheese",
+        "sharp cheddar cheese, grated"
       ],
       "pricePerUnit": 1.4,
       "unit": "cup"
     },
     {
       "keywords": [
-        "mozzarella"
+        "monterey jack",
+        "monterey jack cheese",
+        "jack cheese"
+      ],
+      "pricePerUnit": 0.4,
+      "unit": "oz"
+    },
+    {
+      "keywords": [
+        "mozzarella",
+        "mozzarella cheese",
+        "fresh mozzarella"
       ],
       "pricePerUnit": 1.3,
       "unit": "cup"
@@ -520,6 +597,13 @@
     },
     {
       "keywords": [
+        "puff pastry"
+      ],
+      "pricePerUnit": 0.018,
+      "unit": "g"
+    },
+    {
+      "keywords": [
         "00 flour",
         "tipo 00"
       ],
@@ -537,7 +621,8 @@
       "keywords": [
         "flour",
         "all purpose flour",
-        "all-purpose flour"
+        "all-purpose flour",
+        "sourdough discard"
       ],
       "pricePerUnit": 0.12,
       "unit": "cup"
@@ -549,6 +634,14 @@
       ],
       "pricePerUnit": 0.03,
       "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "cornmeal",
+        "corn meal"
+      ],
+      "pricePerUnit": 0.1,
+      "unit": "cup"
     },
     {
       "keywords": [
@@ -568,7 +661,14 @@
     },
     {
       "keywords": [
-        "rice"
+        "rice",
+        "long-grain rice",
+        "long grain rice",
+        "arborio rice",
+        "arborio",
+        "cooked rice",
+        "cooked jasmine rice",
+        "jasmine rice"
       ],
       "pricePerUnit": 0.12,
       "unit": "cup"
@@ -581,7 +681,14 @@
         "macaroni",
         "noodle",
         "linguine",
-        "fettuccine"
+        "fettuccine",
+        "elbow macaroni",
+        "ziti pasta",
+        "ziti",
+        "penne or fusilli",
+        "fusilli",
+        "spaghetti or tonnarelli",
+        "tonnarelli"
       ],
       "pricePerUnit": 0.12,
       "unit": "cup"
@@ -596,7 +703,9 @@
     },
     {
       "keywords": [
-        "sourdough"
+        "sourdough",
+        "sourdough bread",
+        "sourdough bread, thick slices"
       ],
       "pricePerUnit": 0.35,
       "unit": "slice"
@@ -604,7 +713,9 @@
     {
       "keywords": [
         "flour tortilla",
-        "flour tortillas"
+        "flour tortillas",
+        "flour tortillas (large)",
+        "large flour tortillas"
       ],
       "pricePerUnit": 0.2,
       "unit": "piece"
@@ -627,9 +738,19 @@
     {
       "keywords": [
         "bread",
-        "roll"
+        "roll",
+        "bread, crusts removed"
       ],
       "pricePerUnit": 0.2,
+      "unit": "piece"
+    },
+    {
+      "keywords": [
+        "baguette",
+        "french baguette",
+        "baguette, sliced"
+      ],
+      "pricePerUnit": 3.0,
       "unit": "piece"
     },
     {
@@ -674,16 +795,34 @@
     },
     {
       "keywords": [
+        "diastatic malt",
+        "malt powder"
+      ],
+      "pricePerUnit": 0.08,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
         "yellow onion",
         "yellow onions",
-        "white onion"
+        "white onion",
+        "yellow onion, thinly sliced",
+        "yellow onion, sliced",
+        "yellow onion, diced",
+        "white onions",
+        "white onion, finely diced",
+        "white onion, diced"
       ],
       "pricePerUnit": 0.4,
       "unit": "piece"
     },
     {
       "keywords": [
-        "red onion"
+        "red onion",
+        "red onions",
+        "red onion, thinly sliced",
+        "red onion, finely diced",
+        "red onion, diced"
       ],
       "pricePerUnit": 0.5,
       "unit": "piece"
@@ -691,7 +830,9 @@
     {
       "keywords": [
         "shallot",
-        "shallots"
+        "shallots",
+        "shallot, finely minced",
+        "shallots, minced"
       ],
       "pricePerUnit": 0.4,
       "unit": "piece"
@@ -701,28 +842,52 @@
         "green onion",
         "scallion",
         "green onions",
-        "scallions"
+        "scallions",
+        "green onions, sliced",
+        "chives or green onion",
+        "chives or green onion, sliced",
+        "chives"
       ],
       "pricePerUnit": 0.12,
       "unit": "stalk"
     },
     {
       "keywords": [
-        "onion"
+        "onion",
+        "onions",
+        "onion, diced",
+        "onion, finely diced",
+        "onion, finely chopped",
+        "onion, thinly sliced",
+        "onion, grated",
+        "onion, chopped"
       ],
       "pricePerUnit": 0.4,
       "unit": "piece"
     },
     {
       "keywords": [
-        "garlic"
+        "garlic",
+        "garlic clove",
+        "garlic cloves",
+        "garlic, minced",
+        "garlic, smashed",
+        "garlic, roasted",
+        "garlic cloves, minced",
+        "garlic cloves, thinly sliced",
+        "garlic cloves, roasted",
+        "garlic cloves, smashed",
+        "garlic clove, minced"
       ],
       "pricePerUnit": 0.08,
       "unit": "clove"
     },
     {
       "keywords": [
-        "ginger"
+        "ginger",
+        "fresh ginger",
+        "fresh ginger, grated",
+        "ginger, grated"
       ],
       "pricePerUnit": 0.15,
       "unit": "tbsp"
@@ -730,7 +895,16 @@
     {
       "keywords": [
         "jalapeno",
-        "jalapeño"
+        "jalapeño",
+        "jalapenos",
+        "jalapeños",
+        "jalapeño, minced",
+        "jalapeño, seeded and minced",
+        "fresh chili peppers",
+        "fresh chili peppers, sliced thin",
+        "chili pepper",
+        "chili peppers",
+        "jalapeño pepper"
       ],
       "pricePerUnit": 0.2,
       "unit": "piece"
@@ -746,7 +920,8 @@
     {
       "keywords": [
         "baby potatoes",
-        "yellow potatoes"
+        "yellow potatoes",
+        "baby potato"
       ],
       "pricePerUnit": 0.2,
       "unit": "piece"
@@ -754,7 +929,9 @@
     {
       "keywords": [
         "potato",
-        "potatoes"
+        "potatoes",
+        "yukon gold potatoes",
+        "yukon gold potato"
       ],
       "pricePerUnit": 0.25,
       "unit": "piece"
@@ -762,14 +939,16 @@
     {
       "keywords": [
         "carrot",
-        "carrots"
+        "carrots",
+        "carrot, thinly sliced"
       ],
       "pricePerUnit": 0.15,
       "unit": "piece"
     },
     {
       "keywords": [
-        "celery"
+        "celery",
+        "celery, finely diced"
       ],
       "pricePerUnit": 0.18,
       "unit": "stalk"
@@ -777,7 +956,10 @@
     {
       "keywords": [
         "bell pepper",
-        "bell peppers"
+        "bell peppers",
+        "bell pepper, diced",
+        "bell pepper, sliced",
+        "bell pepper, thinly sliced"
       ],
       "pricePerUnit": 0.9,
       "unit": "piece"
@@ -786,7 +968,8 @@
       "keywords": [
         "cremini mushrooms",
         "cremini",
-        "baby bella"
+        "baby bella",
+        "cremini mushroom"
       ],
       "pricePerUnit": 0.7,
       "unit": "cup"
@@ -794,14 +977,17 @@
     {
       "keywords": [
         "mushroom",
-        "mushrooms"
+        "mushrooms",
+        "mixed mushrooms",
+        "mixed mushrooms, sliced"
       ],
       "pricePerUnit": 0.6,
       "unit": "cup"
     },
     {
       "keywords": [
-        "broccoli"
+        "broccoli",
+        "broccoli florets"
       ],
       "pricePerUnit": 0.5,
       "unit": "cup"
@@ -824,14 +1010,21 @@
     },
     {
       "keywords": [
-        "cucumber"
+        "cucumber",
+        "cucumbers",
+        "cucumber, diced",
+        "cucumber, chopped",
+        "cucumber, grated and drained",
+        "cucumbers, cut into spears"
       ],
       "pricePerUnit": 0.7,
       "unit": "piece"
     },
     {
       "keywords": [
-        "lettuce"
+        "lettuce",
+        "romaine lettuce",
+        "romaine"
       ],
       "pricePerUnit": 1.8,
       "unit": "piece"
@@ -839,7 +1032,8 @@
     {
       "keywords": [
         "spinach",
-        "kale"
+        "kale",
+        "fresh spinach"
       ],
       "pricePerUnit": 0.4,
       "unit": "cup"
@@ -854,14 +1048,30 @@
     {
       "keywords": [
         "tomato",
-        "tomatoes"
+        "tomatoes",
+        "ripe tomatoes",
+        "ripe tomatoes, sliced",
+        "ripe tomatoes, diced",
+        "tomato, diced",
+        "tomatoes, chopped"
       ],
       "pricePerUnit": 0.6,
       "unit": "piece"
     },
     {
       "keywords": [
-        "avocado"
+        "cherry tomatoes",
+        "cherry tomato"
+      ],
+      "pricePerUnit": 0.35,
+      "unit": "cup"
+    },
+    {
+      "keywords": [
+        "avocado",
+        "ripe avocado",
+        "ripe avocados",
+        "avocados"
       ],
       "pricePerUnit": 1.2,
       "unit": "piece"
@@ -869,14 +1079,17 @@
     {
       "keywords": [
         "corn",
-        "ear of corn"
+        "ear of corn",
+        "fresh corn on the cob",
+        "corn on the cob"
       ],
       "pricePerUnit": 0.5,
       "unit": "ear"
     },
     {
       "keywords": [
-        "peas"
+        "peas",
+        "green peas"
       ],
       "pricePerUnit": 0.25,
       "unit": "cup"
@@ -884,21 +1097,34 @@
     {
       "keywords": [
         "apple",
-        "apples"
+        "apples",
+        "granny smith apple",
+        "granny smith apples",
+        "granny smith apple, finely diced",
+        "honeycrisp apples",
+        "honeycrisp apples, peeled and quartered",
+        "apples, peeled and diced"
       ],
       "pricePerUnit": 0.7,
       "unit": "piece"
     },
     {
       "keywords": [
-        "banana"
+        "banana",
+        "bananas",
+        "ripe bananas",
+        "very ripe bananas",
+        "mashed ripe bananas"
       ],
       "pricePerUnit": 0.22,
       "unit": "piece"
     },
     {
       "keywords": [
-        "lemon juice"
+        "lemon juice",
+        "fresh lemon juice",
+        "lime juice",
+        "fresh lime juice"
       ],
       "pricePerUnit": 0.1,
       "unit": "tbsp"
@@ -912,7 +1138,9 @@
     },
     {
       "keywords": [
-        "lemon"
+        "lemon",
+        "lemon, halved",
+        "lemon, sliced"
       ],
       "pricePerUnit": 0.5,
       "unit": "piece"
@@ -929,14 +1157,17 @@
         "strawberry",
         "strawberries",
         "blueberry",
-        "blueberries"
+        "blueberries",
+        "fresh blueberries",
+        "fresh blueberry"
       ],
       "pricePerUnit": 2.5,
       "unit": "cup"
     },
     {
       "keywords": [
-        "artichoke"
+        "artichoke",
+        "artichoke hearts"
       ],
       "pricePerUnit": 2.5,
       "unit": "piece"
@@ -947,7 +1178,8 @@
         "frozen spinach",
         "frozen corn",
         "frozen vegetables",
-        "frozen vegetable"
+        "frozen vegetable",
+        "frozen peas and carrots"
       ],
       "pricePerUnit": 0.3,
       "unit": "cup"
@@ -980,7 +1212,8 @@
       "keywords": [
         "chickpea",
         "chickpeas",
-        "garbanzo"
+        "garbanzo",
+        "canned chickpeas"
       ],
       "pricePerUnit": 0.35,
       "unit": "cup"
@@ -1028,7 +1261,9 @@
     },
     {
       "keywords": [
-        "san marzano"
+        "san marzano",
+        "canned san marzano tomatoes",
+        "san marzano tomatoes"
       ],
       "pricePerUnit": 0.22,
       "unit": "tbsp"
@@ -1074,7 +1309,8 @@
     {
       "keywords": [
         "marinara",
-        "tomato sauce"
+        "tomato sauce",
+        "marinara sauce"
       ],
       "pricePerUnit": 0.1,
       "unit": "tbsp"
@@ -1103,7 +1339,8 @@
     },
     {
       "keywords": [
-        "olive oil"
+        "olive oil",
+        "extra virgin olive oil"
       ],
       "pricePerUnit": 0.18,
       "unit": "tbsp"
@@ -1127,7 +1364,8 @@
         "vegetable oil",
         "canola oil",
         "neutral oil",
-        "cooking oil"
+        "cooking oil",
+        "peanut or vegetable oil"
       ],
       "pricePerUnit": 0.08,
       "unit": "tbsp"
@@ -1221,10 +1459,29 @@
     {
       "keywords": [
         "peanut butter",
-        "peanuts"
+        "peanuts",
+        "roasted peanuts"
       ],
       "pricePerUnit": 0.1,
       "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "almond butter"
+      ],
+      "pricePerUnit": 0.18,
+      "unit": "tbsp"
+    },
+    {
+      "keywords": [
+        "almonds",
+        "almond",
+        "raw almonds",
+        "roasted almonds",
+        "raw or roasted almonds"
+      ],
+      "pricePerUnit": 0.4,
+      "unit": "oz"
     },
     {
       "keywords": [
@@ -1266,7 +1523,8 @@
     {
       "keywords": [
         "gochujang",
-        "korean chili paste"
+        "korean chili paste",
+        "gochujang (korean chili paste)"
       ],
       "pricePerUnit": 0.18,
       "unit": "tbsp"
@@ -1297,7 +1555,8 @@
     },
     {
       "keywords": [
-        "honey"
+        "honey",
+        "raw honey"
       ],
       "pricePerUnit": 0.12,
       "unit": "tbsp"
@@ -1328,7 +1587,12 @@
     {
       "keywords": [
         "pickle",
-        "relish"
+        "relish",
+        "dill pickles",
+        "dill pickle",
+        "dill pickles, finely diced",
+        "pickle brine",
+        "pickle juice"
       ],
       "pricePerUnit": 0.12,
       "unit": "tbsp"
@@ -1388,15 +1652,33 @@
     },
     {
       "keywords": [
-        "salt"
+        "celery salt"
+      ],
+      "pricePerUnit": 0.04,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
+        "salt",
+        "salt for pasta water",
+        "flaky sea salt",
+        "sea salt"
       ],
       "pricePerUnit": 0.01,
       "unit": "tsp"
     },
     {
       "keywords": [
+        "msg"
+      ],
+      "pricePerUnit": 0.02,
+      "unit": "tsp"
+    },
+    {
+      "keywords": [
         "black peppercorns",
-        "peppercorns"
+        "peppercorns",
+        "black peppercorns, coarsely cracked"
       ],
       "pricePerUnit": 0.04,
       "unit": "tsp"
@@ -1542,49 +1824,66 @@
     },
     {
       "keywords": [
-        "basil"
+        "basil",
+        "fresh basil",
+        "fresh basil leaves",
+        "fresh basil, chopped",
+        "thai basil",
+        "thai basil leaves",
+        "dried basil"
       ],
       "pricePerUnit": 0.04,
       "unit": "tsp"
     },
     {
       "keywords": [
-        "oregano"
+        "oregano",
+        "dried oregano"
       ],
       "pricePerUnit": 0.03,
       "unit": "tsp"
     },
     {
       "keywords": [
-        "thyme"
+        "thyme",
+        "fresh thyme",
+        "fresh thyme sprigs"
       ],
       "pricePerUnit": 0.04,
       "unit": "tsp"
     },
     {
       "keywords": [
-        "rosemary"
+        "rosemary",
+        "fresh rosemary",
+        "fresh rosemary, chopped"
       ],
       "pricePerUnit": 0.04,
       "unit": "tsp"
     },
     {
       "keywords": [
-        "parsley"
+        "parsley",
+        "fresh parsley",
+        "fresh parsley, chopped"
       ],
       "pricePerUnit": 0.03,
       "unit": "tsp"
     },
     {
       "keywords": [
-        "cilantro"
+        "cilantro",
+        "fresh cilantro",
+        "fresh cilantro, chopped"
       ],
       "pricePerUnit": 0.04,
       "unit": "tsp"
     },
     {
       "keywords": [
-        "dill"
+        "dill",
+        "fresh dill",
+        "fresh dill, minced"
       ],
       "pricePerUnit": 0.04,
       "unit": "tsp"
@@ -1622,7 +1921,8 @@
     },
     {
       "keywords": [
-        "sugar"
+        "sugar",
+        "granulated sugar"
       ],
       "pricePerUnit": 0.04,
       "unit": "tbsp"
@@ -1652,21 +1952,25 @@
     {
       "keywords": [
         "cocoa",
-        "cocoa powder"
+        "cocoa powder",
+        "cocoa powder for dusting"
       ],
       "pricePerUnit": 0.12,
       "unit": "tbsp"
     },
     {
       "keywords": [
-        "dark chocolate"
+        "dark chocolate",
+        "dark chocolate (70%)",
+        "dark chocolate 70"
       ],
       "pricePerUnit": 0.25,
       "unit": "tbsp"
     },
     {
       "keywords": [
-        "white chocolate"
+        "white chocolate",
+        "white chocolate chips"
       ],
       "pricePerUnit": 0.22,
       "unit": "tbsp"
@@ -1674,7 +1978,8 @@
     {
       "keywords": [
         "chocolate chips",
-        "chips"
+        "chips",
+        "dark chocolate chips"
       ],
       "pricePerUnit": 0.15,
       "unit": "tbsp"
@@ -1705,7 +2010,8 @@
     },
     {
       "keywords": [
-        "white wine"
+        "white wine",
+        "dry white wine"
       ],
       "pricePerUnit": 1.5,
       "unit": "cup"
@@ -1728,7 +2034,10 @@
       "keywords": [
         "coffee liqueur",
         "kahlua",
-        "kaahlua"
+        "kaahlua",
+        "kahlúa",
+        "coffee liqueur (kahlúa)",
+        "kahula"
       ],
       "pricePerUnit": 1.5,
       "unit": "tbsp"
@@ -1736,7 +2045,8 @@
     {
       "keywords": [
         "espresso",
-        "strong coffee"
+        "strong coffee",
+        "strong espresso"
       ],
       "pricePerUnit": 0.4,
       "unit": "cup"
@@ -1789,7 +2099,10 @@
     },
     {
       "keywords": [
-        "water"
+        "water",
+        "warm water",
+        "boiling water",
+        "ice water"
       ],
       "pricePerUnit": 0,
       "unit": "g"
